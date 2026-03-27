@@ -1,3 +1,4 @@
+
 text = """
 Belong
 Kehillah commits to creating and holding a welcoming space for all students to
@@ -27,14 +28,34 @@ change in their communities and beyond.
 # (Hint: use the `.split()` method to get a list of all the words) and the
 # values are the number of times each word appears. Print the dicitonary.
 
+
 # 1. Remove all new lines and punctuation, and convert to all lowercase.
 #### YOUR CODE HERE
+x=text.split()
+y=text.lower()
+z="".join(y)
+punctuation=[".", "," "-" "'", "---", ":"]
+for symbol in punctuation:
+    z=z.replace(symbol, "")
+words=z.split()
+word_count={}
+for word in words:
+    if word in word_count:
+        word_count[word] +=1
+    else:
+        word_count[word]=1
+print(word_count)
+
+
+
+
 
 # 2. Use the `.split()` method to split into a list of words.
 #### YOUR CODE HERE
 
 # 3. Initialize an empty dictionary to keep track of word counts.
 #### YOUR CODE HERE
+
 
 # 4. loop through the list of words and update the dictionary. If the word is
 # already a key in the dicitonary, increment the count. If not, add the new key
